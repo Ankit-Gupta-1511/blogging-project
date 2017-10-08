@@ -33,15 +33,31 @@ ul.normal-list li
 {
   display: list-item;
 }
+
+a,a:hover
+{
+  color: inherit;
+}
 .navbar
 {
   margin:0;
+  padding-left: 20px;
 }
 
 .normal-cta
 {
   background-color: #232F3E;
   color: white;
+}
+
+.container-fluid
+{
+  padding:0;
+}
+
+.banner img
+{
+  width: 100%;
 }
 
 .banner-carousel .item .content
@@ -136,6 +152,7 @@ ul.normal-list li
 .blog .image img
 {
   height: 100%;
+  width: 300px;
 }
 .blog .content
 {
