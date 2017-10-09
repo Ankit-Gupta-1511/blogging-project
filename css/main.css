@@ -167,6 +167,15 @@ a,a:hover
   text-decoration: underline;
 }
 
+.content-container
+{
+  width: 60%;
+  margin: 50px auto;
+  min-height: 400px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
 footer
 {
   background-color: #1c2531;
@@ -183,4 +192,38 @@ footer .normal-list li
 {
   margin: 10px 30px;
   color: #337ab7;
+}
+
+.popup
+{
+  width: 300px;
+ text-align: center;
+  position: fixed;
+  bottom:0;
+  right:0;
+}
+
+.popup .panel
+{
+  margin:0;
+}
+
+
+.popup .panel-default .panel-heading
+{
+  background-color: #1c2531;
+  color: white;
+}
+
+.alternate-cta
+{
+    border: 2px solid #1c2531;
+    color:  #1c2531;
+    font-weight: bold;
+    width: 200px;
+}
+
+#subscribeModal
+{
+  text-align: center;
 }
