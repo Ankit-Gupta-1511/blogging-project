@@ -3,6 +3,19 @@ html,body
     width:100%;
     height: 100%;
 }
+.navbar
+{
+  background-color: #1c2531;
+  color: white;
+  border: none;
+  border-radius:0;
+}
+.navbar a{
+  color: white!important;
+}
+.navbar-default .navbar-nav li a:hover,.navbar-default .navbar-nav li.active a{
+  background-color: #3059b0;
+}
 ul
 {
     margin-bottom: 0;
@@ -226,4 +239,9 @@ footer .normal-list li
 #subscribeModal
 {
   text-align: center;
+}
+
+.blog-heading
+{
+  font-weight: bold;
 }
