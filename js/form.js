@@ -23,6 +23,14 @@ function preventSubmitEvents(){
             console.log("form submission stopped");
             });
             }
+    else if(form[0].id=="subscriptionForm")
+        {  form[0].addEventListener("submit",event => {
+            event.preventDefault();
+            subscriptionFormSubmission();
+            console.log("form submission stopped");
+            });
+            
+        }
 }
 
 function contactFormSubmission(){
@@ -84,3 +92,29 @@ function signupFormSubmission(){
     
 }    
 
+function subscriptionFormSubmission(){
+  
+    var values = {};
+    var i = 0;
+    $inputs = $("#subscriptionForm :input");
+    $inputs.each(function(){
+        values[i] = $(this).val();
+        i++;
+    });
+    
+    if(values[0]!="")
+        {
+            $.ajax({
+                    method: "POST",
+                    url:"https://docs.google.com/forms/d/e/1FAIpQLSfkqqy9Ue05J6D5sFj9PZzPtk9csGVCSJTe5IRwXRNi3z6rkA/formResponse",
+                    data: {
+                        'entry.1835715948' : values[0],
+                        
+                    }
+                }).done(function (){
+                    console.log("contact form data sent to sheet");
+                });        
+        }
+    
+    
+}
