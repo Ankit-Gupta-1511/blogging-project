@@ -74,11 +74,20 @@ function populateTweets()
 function newsletterPopup()
 {
   var popup = '<div class="popup"><div class="panel panel-default">'+
-                  '<div class="panel-heading">Subscribe</div>'+
-                  '<div class="panel-body">'+'<p>Subscribe to our newsletter</p>'+'<button class="btn btn-default normal-cta" type="button" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>'+'</div>'+
+                  '<div class="panel-heading">Subscribe' +
+      '<button class="btn btn-danger pull-right popup-close" type="button"><i class="fa fa-close"></i></button>'+
+  '</div>'+
+                  '<div class="panel-body">'+
+      '<p>Subscribe to our newsletter</p>'
+  +
+      '<button class="btn btn-default normal-cta" type="button" data-toggle="modal" data-target="#subscribeModal">Subscribe</button>'+'</div>'+
               '</div></div>';
 
 
   $('body').append(popup);
 
 }
+
+$('.popup-close').click(function(){
+    $('.popup').slideDown();
+});
