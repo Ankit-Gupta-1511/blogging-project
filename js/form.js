@@ -31,6 +31,14 @@ function preventSubmitEvents(){
             });
             
         }
+    else if(form[0].id=="commentForm")
+        {  form[0].addEventListener("submit",event => {
+            event.preventDefault();
+            commentFormSubmission();
+            console.log("form submission stopped");
+            });
+            
+        }
 }
 
 function contactFormSubmission(){
@@ -59,6 +67,8 @@ function contactFormSubmission(){
                     console.log("contact form data sent to sheet");
                 });        
         }
+    
+    window.location.reload();
     
     
 }
@@ -89,6 +99,7 @@ function signupFormSubmission(){
                 });        
         }
     
+    window.location.reload();
     
 }    
 
@@ -116,5 +127,36 @@ function subscriptionFormSubmission(){
                 });        
         }
     
+        window.location.reload();
     
+    
+}
+
+function commentFormSubmission(){
+  
+    var values = {};
+    var i = 0;
+    $inputs = $("#commentForm :input");
+    $inputs.each(function(){
+        values[i] = $(this).val();
+        i++;
+    });
+    
+    if(values[0]!="")
+        {
+            $.ajax({
+                    method: "POST",                   url:"https://docs.google.com/forms/d/e/1FAIpQLSdEf8omkyz5n3SX2GPxoTRj_gqF4WallrHVoMfdT1MtPCDEmA/formResponse",
+                    data: {
+                        'entry.206934621' : values[0],
+                        'entry.1217717410' : values[1],
+                        'entry.251042345' : values[2],
+                        'entry.930951112' : $(".blog-heading").text(),
+                        
+                    }
+                }).done(function (){
+                    console.log("contact form data sent to sheet");
+                });        
+        }
+    
+    window.location.reload();
 }

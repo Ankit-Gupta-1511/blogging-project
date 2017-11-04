@@ -88,6 +88,3 @@ function newsletterPopup()
 
 }
 
-$('.popup-close').click(function(){
-    $('.popup').slideDown();
-});
