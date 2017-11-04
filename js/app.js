@@ -82,3 +82,4 @@ function newsletterPopup()
   $('body').append(popup);
 
 }
+
