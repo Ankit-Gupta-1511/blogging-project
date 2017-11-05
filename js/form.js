@@ -86,13 +86,12 @@ function signupFormSubmission(){
     if(values[0]!="")
         {
             $.ajax({
-                    method: "POST",                   url:"https://docs.google.com/forms/d/e/1FAIpQLSfRVa61oenHuEVKDLgfTFOUQ8jnU3oGHlu_a9ggIpscslyCAQ/formResponse",
+                    method: "POST",                   url:"https://docs.google.com/forms/d/e/1FAIpQLSelFqgjghJnO2aYa8ao6PiBMKTxV4nXDan38VQzhjYLJs2Kow/formResponse",
                     data: {
-                        'entry.1697715006' : values[0],
-                        'entry.1178534794' : values[1],
-                        'entry.690718033' : values[2],
-                        'entry.950998382' : values[3],
-                        'entry.1257021985' : values[4]
+                        'entry.2055157495' : values[0],
+                        'entry.891754708' : values[1],
+                        'entry.644889342' : values[2],
+                        
                     }
                 }).done(function (){
                     console.log("contact form data sent to sheet");
